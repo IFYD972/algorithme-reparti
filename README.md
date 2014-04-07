@@ -1,4 +1,4 @@
-Algorithme répartis
+Algorithmes répartis
 ==================
 
 Ce projet a été réalisé dans le but d'appliquer les principes de base de réalisation d'applications réparties.
