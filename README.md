@@ -1,6 +1,3 @@
-Algorithmes répartis
-==================
-
 Ce projet a été réalisé dans le but d'appliquer les principes de base de réalisation d'applications réparties.
 
 L'objectif' de ce projet est de réaliser un outil d’aide à la gestion du trafic de bus. L’application permet de prendre en charge plusieurs bus et de présenter à un contrôleur la liste des bus dont il a la charge. Un contrôleur peut sélectionner un ou plusieurs bus de cette liste et leur envoyer un ordre. 
@@ -21,4 +18,4 @@ Le rôle du serveur de gestion du trafic est donc de recevoir en simultané les 
  
 Le contrôleur peut modifier les caractéristiques d’un bus en lui demandant de changer sa destination ou sa vitesse. Il devra sélectionner d’abord le numéro de bus concerné. 
 
-La documentation du projet est disponible au format PDF.
+La documentation du projet est disponilbe au format PDF.

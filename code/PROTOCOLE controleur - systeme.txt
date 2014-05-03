@@ -1,0 +1,20 @@
+﻿IP : 127.0.0.1
+Port controleur: 2626
+Port systeme : 2525
+
+//PREMIERE CONNEXION (TCP)
+Controleur : INIT
+Systeme : 200 READY
+Systeme : DATA {ID_CONTROLEUR, {LIGNE, LIGNE...}}
+
+//CHOIX LIGNE (TCP)
+Controleur : CHOIX *ID_LIGNE* *ID_CONTROLEUR*
+Systeme : OK/NOT
+
+//DONNÉES (UDP)
+Systeme : DATA {ID_LIGNE, {{ID_BUS, VITESSE, DESTINATION, POSITION}, {ID_BUS, VITESSE, DESTINATION, POSITION}...}
+Controleur : OK
+
+//ORDRES (TCP)
+Controleur : ORDRE *NOM_ORDRE* *ID_LIGNE* *BUS* *VALEUR*
+System : OK

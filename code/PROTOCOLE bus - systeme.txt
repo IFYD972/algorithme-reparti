@@ -1,0 +1,47 @@
+
+Port reception ordre : 4141
+Port envoi caracteristiques : 2525
+
+SOCKETS
+A.Socket envoi/reception données => UDP
+B.Socket pour les ordres => TCP
+
+ETAPES
+1.Connexion
+2.Envoi des donnees / des ordres
+
+A.1.CONNEXION (socket A => UDP)
+Pas de connexion
+
+A.2.ENVOI DES DONNEES (socket A => UDP)
+ServeurBus toute les 5 secondes : DATA {"numero":ID_LIGNE, bus[ID_BUS]: {"vitesseCourante":VITESSE, "stationDestination":STATION_DESTINATION, "stationCourante":STATION_COURANTE}, ...] //JSON
+[LOOP]
+
+B.1.CONNEXION (socket B => TCP)
+ServeurBus : INIT
+SGT : 220 READY
+SGT : {"numero":1,"stations":["84:177","83:148","84:122","122:119","160:118","195:148","226:173","257:195","294:225","331:222","378:222","428:222","485:225"]} //JSON: exemple pour la ligne 1
+
+### 
+CODE POUR L'ENVOI DE LA LIGNE 1 
+###
+	JSONObject ligneUne = new JSONObject();
+	ligneUne.put("numero",new Integer(1));
+	  
+	LinkedList stationsLigneUne = new LinkedList();
+	stationsLigneUne.add("84:177");
+	stationsLigneUne.add("83:148");
+	stationsLigneUne.add("84:122");
+	ligneUne.put("stations",stationsLigneUne);
+	  
+	return ligneUne;
+### 
+FIN CODE POUR LA LIGNE 1 
+###
+
+B.2.ENVOI DES ORDRES (socket B => TCP)
+SGT : ORDRE {"bus": NUMERO_BUS, "type_ordre":TYPE_ORDRE[:"destination","vitesse"], "valeur_ordre":VALEUR_ORDRE} //JSON 
+ServeurBUS : ORDRE OK *ID_LIGNE*
+[LOOP]
+A la fin (des que les bus sont tous arrives a destination) ServeurBus : QUIT
+SGT : 221 closing connexion
