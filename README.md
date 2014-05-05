@@ -1,3 +1,8 @@
+Système réparti pour gestion de traffic
+==
+
+Auteurs : [jococo972](https://github.com/jococo972) [nissnac](https://github.com/nissnac) [AlexMili](https://github.com/AlexMili)
+
 Ce projet a été réalisé dans le but d'appliquer les principes de base de réalisation d'applications réparties.
 
 L'objectif' de ce projet est de réaliser un outil d’aide à la gestion du trafic de bus. L’application permet de prendre en charge plusieurs bus et de présenter à un contrôleur la liste des bus dont il a la charge. Un contrôleur peut sélectionner un ou plusieurs bus de cette liste et leur envoyer un ordre. 
