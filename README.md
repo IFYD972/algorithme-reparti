@@ -1,7 +1,7 @@
 Système réparti pour gestion de traffic
 ==
 
-Auteurs : [jococo972](https://github.com/jococo972), [nissnac](https://github.com/nissnac) et  [AlexMili](https://github.com/AlexMili)
+Auteurs : [IFYDY972](https://github.com/IFYD972), [nissnac](https://github.com/nissnac) et  [AlexMili](https://github.com/AlexMili)
 
 Ce projet a été réalisé dans le but d'appliquer les principes de base de réalisation d'applications réparties.
 
